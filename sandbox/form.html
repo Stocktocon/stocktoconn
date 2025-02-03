@@ -14,32 +14,33 @@
         <fieldset>
             <legend>Sample Form</legend>
             
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br><br>
+            <label for="input">input:<details>
+                <summary>Choose a tako</summary>
+                Choose a tako!!!. Tako 1 is a happy tako. Tako 2 is a hungry tako. Tako 3 is here.
+            </details></label>
+            <input type="text" id="input" name="input" list="datalist">
+            <datalist id="datalist">
+                <option value="tako 1">tako!</option>
+                <option value="tako 2">tako tako!</option>
+                <option value="tako 3">takodachi!!!</option>
+            </datalist><br>
+
+            <label for="message">textarea:</label><br>
+            <textarea id="textarea" name="textarea"></textarea><br>
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br><br>
-            
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
-            
-            <label for="category">Category:</label>
-            <select id="category" name="category">
-                <option value="general">General Inquiry</option>
-                <option value="support">Support</option>
-                <option value="feedback">Feedback</option>
+            <label for="select">select:</label>
+            <select id="select" name="select">
+                <optgroup label="optgroupA">
+                    <option value="opt1">option1</option>
+                    <option value="opt2">option2</option>
+                    <option value="opt3">option3</option>
+                </optgroup>
+                <optgroup label="optgroupB">
+                    <option value="opt4">option4</option>
+                    <option value="opt5">option5</option>
+                    <option value="opt6">option6</option>
+                </optgroup>
             </select><br><br>
-            
-            <fieldset>
-                <legend>Preferred Contact Method:</legend>
-                <input type="radio" id="email_contact" name="contact_method" value="email" checked>
-                <label for="email_contact">Email</label>
-                <input type="radio" id="phone_contact" name="contact_method" value="phone">
-                <label for="phone_contact">Phone</label>
-            </fieldset><br>
-            
-            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
-            <label for="subscribe">Subscribe to newsletter</label><br><br>
             
             <button type="submit">Submit</button>
         </fieldset>
