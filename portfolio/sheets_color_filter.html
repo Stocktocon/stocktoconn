@@ -23,52 +23,54 @@
         </header>
         <main>
             <h1>Portfolio</h1>
-            <code>
-                function cellColorCompare(cellRange,colorRef) {</br>
-                var activeRange = SpreadsheetApp.getActiveRange();</br>
-                var activeSheet = activeRange.getSheet();</br>
-                var formula = activeRange.getFormula();</br>
-            </br>
-                var field = formula.split("");</br>
-                var currStep = 0;</br>
-                var ranges = ''</br>
-                for(i=0; i&ltfield.length; i++){</br>
-                  if(currStep == 0)</br>
-                    if(field[i]!="c")</br>
-                      continue</br>
-                    if(field[i]=="c" && field[i+1]=="e" && field[i+2]=="l" && field[i+3]=="l" && field[i+4]=="C" && field[i+5]=="o" && field[i+6]=="l" && field[i+7]=="o" && field[i+8]=="r" && field[i+9]=="C" && field[i+10]=="o" && field[i+11]=="m" && field[i+12]=="p" && field[i+13]=="a" && field[i+14]=="r" && field[i+15]=="e" && field[i+16]=="("){</br>
-                      currStep = 1;</br>
-                      i+=16</br>
-                      continue</br>
-                    }</br>
-                  if(currStep==1){</br>
-                    if(field[i]!=')'){</br>
-                      ranges += field[i]</br>
-                    }</br>
-                    else{</br>
-                      break</br>
-                    }</br>
-                  }</br>
-                }</br>
-                var thing = ranges.split(",")</br>
-                var cellRange = thing[0]</br>
-                var colorRef = thing[1]</br>
-            </br>
-                var rangeA1Notation = cellRange;</br>
-                var range = activeSheet.getRange(rangeA1Notation);</br>
-                var bg = range.getBackgrounds();</br>
-            </br>
-                var colorCellA1Notation = colorRef;</br>
-                var colorCell = activeSheet.getRange(colorCellA1Notation);</br>
-                var color = colorCell.getBackground();</br>
-            </br>
-                returnArray = []</br>
-                for(i=0; i&ltbg.length; i++){</br>
-                  returnArray.push(bg[i]==color);</br>
-                }</br>
-                return returnArray;</br>
-              };</br>
-            </code>
+            <div class="codeBlock">
+                <code>
+                    function cellColorCompare(cellRange,colorRef) {
+                    var activeRange = SpreadsheetApp.getActiveRange();
+                    var activeSheet = activeRange.getSheet();
+                    var formula = activeRange.getFormula();
+                
+                    var field = formula.split("");
+                    var currStep = 0;
+                    var ranges = ''
+                    for(i=0; i&ltfield.length; i++){
+                    if(currStep == 0)
+                        if(field[i]!="c")
+                        continue
+                        if(field[i]=="c" && field[i+1]=="e" && field[i+2]=="l" && field[i+3]=="l" && field[i+4]=="C" && field[i+5]=="o" && field[i+6]=="l" && field[i+7]=="o" && field[i+8]=="r" && field[i+9]=="C" && field[i+10]=="o" && field[i+11]=="m" && field[i+12]=="p" && field[i+13]=="a" && field[i+14]=="r" && field[i+15]=="e" && field[i+16]=="("){
+                        currStep = 1;
+                        i+=16
+                        continue
+                        }
+                    if(currStep==1){
+                        if(field[i]!=')'){
+                        ranges += field[i]
+                        }
+                        else{
+                        break
+                        }
+                    }
+                    }
+                    var thing = ranges.split(",")
+                    var cellRange = thing[0]
+                    var colorRef = thing[1]
+                
+                    var rangeA1Notation = cellRange;
+                    var range = activeSheet.getRange(rangeA1Notation);
+                    var bg = range.getBackgrounds();
+                
+                    var colorCellA1Notation = colorRef;
+                    var colorCell = activeSheet.getRange(colorCellA1Notation);
+                    var color = colorCell.getBackground();
+                
+                    returnArray = []
+                    for(i=0; i&ltbg.length; i++){
+                    returnArray.push(bg[i]==color);
+                    }
+                    return returnArray;
+                };
+                </code>
+            </div>
         </main>
         <hr></hr>
         <footer>more stuff soon&trade;</footer>
