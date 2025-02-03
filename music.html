@@ -23,12 +23,20 @@
         </header>
         <main>
             <h1>Music</h1>
-            <p>This is a simple HTML page with a heading and a paragraph.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/n0_sq5cqiFA?si=5IZqWwefT_4sX0ns" 
+            <p>One of my passions is music. While I don't play or make music as much anymore, I still love listening to genres like jazz, classical, and rock.</p>
+            <div class="musicContainer">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/n0_sq5cqiFA?si=5IZqWwefT_4sX0ns" 
                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
                 encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
                 allowfullscreen>
-            </iframe>
+                </iframe>
+            </div>
+            <div class="musicContainer">
+                <audio controls>
+                    <source src="/media/temp_audio.mp3" type="audio/mp3">
+                    Your browser does not support the audio tag. Temporary Audio File. 
+                  </audio>
+            </div>
         </main>
         <hr></hr>
         <footer>more stuff soon&trade;</footer>
