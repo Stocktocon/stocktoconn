@@ -11,7 +11,7 @@
     <font face = "Helvetica, Arial, sans-serif">
         <header>
             <!-- I can't wait for us to be able to use a SSG to make these headers automatically apply to all pages. -->
-            <h1><a href="index.html">Home</a><img src="./imgs/beng.webp" alt="benguin image" width="96px" height="96px"></h1>
+            <h1><img src="./imgs/beng.webp" alt="benguin image" width="96px" height="96px"><a href="index.html">Home</a></h1>
             <nav>
                 <ul>
                     <li><a href="portfolio.html">Portfolio</a></li>
@@ -29,6 +29,12 @@
                 <h1>About Me</h1>
                 <p>Some filler text. I'm Connor Huang. I like keyboards and I <i>(used to)</i> play a lot of cello. 
                 I currently work at UCSD as a student cybersecurity programmer.</p>
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/portrait_small.jpg">
+                    <source media="(min-width: 768px)" srcset="./img/portrait_big.jpg" >
+                    <img src="./img/portrait.jpg" alt="portrait image">
+                </picture>
+                <aside>Cool Picture of Me</aside>
             </section>
             <section>
                 <h2><b>Experience</b></h2>
@@ -51,7 +57,9 @@
             </p>
         </main>
         <hr></hr>
-        <footer>more stuff soon&trade;</footer>
+        <!--Not really sure what to put here. Maybe contact info?-->
+        <footer>more stuff <span>soon&trade;</span></footer>
+        <!--Span is used here because I think it'd be funny to make soon:tm: become animated in some sort down the line-->
     </font>
 </body>
 </html>
