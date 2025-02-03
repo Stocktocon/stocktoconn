@@ -7,36 +7,35 @@
     <title>Portfolio | Connor H. Huang</title>
 </head>
 <body>
-    <font face = "Helvetica, Arial, sans-serif">
-        <header>
-            <h1><img src="/imgs/beng.webp" alt="benguin image" width="96px" height="96px"><a href="/index.html">Home</a></h1>
-            <nav>
-                <ul>
-                    <li><a href="/portfolio.html">Portfolio</a></li>
-                    <li><a href="/personal_projects.html">Personal Projects</a></li>
-                    <li><a href="/music.html">Music</a></li>
-                    <li><a href="/keyboards.html">Keyboards</a></li>
-                    <li><a href="/resume.html">Resume</a></li>
-                    <li><a href="/sandbox.html">HTML Sandbox</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <h1>Portfolio</h1>
-            <nav>
-                <p><strong>Table of Contents</strong></p>
-                <li><a href="/portfolio/ccr.html">CCR Automation Script</a></li>
-                <li><a href="/portfolio/compliance.html">Compliance Project</a></li>
-                <li><a href="/portfolio/sheets_color_filter.html">Google Sheets Color Filter</a></li>
-            </nav>
-            <h2>Google Sheets: Cell Color Filtering</h2>
-            <p>I don't know why this isn't an option in google sheets to filter by default. 
-                Simply takes a reference cell and a range of cells and filters out the cells in the range
-                based on if they match the color of the reference cell or not. 
-            </p>
-            <div class="codeBlock">
-                <!--eventually might change code blocks to be in iframes of somesort that has specific -->
-                <code>
+    <header>
+        <h1><img src="/imgs/beng.webp" alt="benguin image" width="96px" height="96px"><a href="/index.html">Home</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/personal_projects.html">Personal Projects</a></li>
+                <li><a href="/music.html">Music</a></li>
+                <li><a href="/keyboards.html">Keyboards</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/sandbox.html">HTML Sandbox</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Portfolio</h1>
+        <nav>
+            <p><strong>Table of Contents</strong></p>
+            <li><a href="/portfolio/ccr.html">CCR Automation Script</a></li>
+            <li><a href="/portfolio/compliance.html">Compliance Project</a></li>
+            <li><a href="/portfolio/sheets_color_filter.html">Google Sheets Color Filter</a></li>
+        </nav>
+        <h2>Google Sheets: Cell Color Filtering</h2>
+        <p>I don't know why this isn't an option in google sheets to filter by default. 
+            Simply takes a reference cell and a range of cells and filters out the cells in the range
+            based on if they match the color of the reference cell or not. 
+        </p>
+        <div class="codeBlock">
+            <!--eventually might change code blocks to be in iframes of somesort that has specific -->
+            <code>
 <pre>function cellColorCompare(cellRange,colorRef) {
     var activeRange = SpreadsheetApp.getActiveRange();
     var activeSheet = activeRange.getSheet();
@@ -81,11 +80,10 @@
     }
     return returnArray;
 };</pre>
-            </code>
-            </div>
-        </main>
-        <hr></hr>
-        <footer>more stuff soon&trade;</footer>
-    </font>
+        </code>
+        </div>
+    </main>
+    <hr>
+    <footer>more stuff soon&trade;</footer>
 </body>
 </html>
