@@ -23,9 +23,19 @@
         </header>
         <main>
             <h1>Portfolio</h1>
+            <nav>
+                <p><strong>Table of Contents</strong></p>
+                <li><a href="./portfolio/ccr.html">CCR Automation Script</a></li>
+                <li><a href="./portfolio/compliance.html">Compliance Project</a></li>
+                <li><a href="./portfolio/sheets_color_filter.html">Google Sheets Color Filter</a></li>
+            </nav>
             <h2>Google Sheets: Cell Color Filtering</h2>
-            <p>I don't know why this isn't an option in google sheets to filter by.</p>
+            <p>I don't know why this isn't an option in google sheets to filter by default. 
+                Simply takes a reference cell and a range of cells and filters out the cells in the range
+                based on if they match the color of the reference cell or not. 
+            </p>
             <div class="codeBlock">
+                <!--eventually might change code blocks to be in iframes of somesort that has specific -->
                 <code>
 <pre>function cellColorCompare(cellRange,colorRef) {
     var activeRange = SpreadsheetApp.getActiveRange();
@@ -36,22 +46,22 @@
     var currStep = 0;
     var ranges = ''
     for(i=0; i&ltfield.length; i++){
-    if(currStep == 0)
-        if(field[i]!="c")
-        continue
-        if(field[i]=="c" && field[i+1]=="e" && field[i+2]=="l" && field[i+3]=="l" && field[i+4]=="C" && field[i+5]=="o" && field[i+6]=="l" && field[i+7]=="o" && field[i+8]=="r" && field[i+9]=="C" && field[i+10]=="o" && field[i+11]=="m" && field[i+12]=="p" && field[i+13]=="a" && field[i+14]=="r" && field[i+15]=="e" && field[i+16]=="("){
-        currStep = 1;
-        i+=16
-        continue
+        if(currStep == 0)
+            if(field[i]!="c")
+            continue
+            if(field[i]=="c" && field[i+1]=="e" && field[i+2]=="l" && field[i+3]=="l" && field[i+4]=="C" && field[i+5]=="o" && field[i+6]=="l" && field[i+7]=="o" && field[i+8]=="r" && field[i+9]=="C" && field[i+10]=="o" && field[i+11]=="m" && field[i+12]=="p" && field[i+13]=="a" && field[i+14]=="r" && field[i+15]=="e" && field[i+16]=="("){
+            currStep = 1;
+            i+=16
+            continue
+            }
+        if(currStep==1){
+            if(field[i]!=')'){
+            ranges += field[i]
+            }
+            else{
+            break
+            }
         }
-    if(currStep==1){
-        if(field[i]!=')'){
-        ranges += field[i]
-        }
-        else{
-        break
-        }
-    }
     }
     var thing = ranges.split(",")
     var cellRange = thing[0]
