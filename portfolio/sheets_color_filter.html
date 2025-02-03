@@ -23,53 +23,55 @@
         </header>
         <main>
             <h1>Portfolio</h1>
+            <h2>Google Sheets: Cell Color Filtering</h2>
+            <p>I don't know why this isn't an option in google sheets to filter by.</p>
             <div class="codeBlock">
                 <code>
-                    function cellColorCompare(cellRange,colorRef) {
-                    var activeRange = SpreadsheetApp.getActiveRange();
-                    var activeSheet = activeRange.getSheet();
-                    var formula = activeRange.getFormula();
-                
-                    var field = formula.split("");
-                    var currStep = 0;
-                    var ranges = ''
-                    for(i=0; i&ltfield.length; i++){
-                    if(currStep == 0)
-                        if(field[i]!="c")
-                        continue
-                        if(field[i]=="c" && field[i+1]=="e" && field[i+2]=="l" && field[i+3]=="l" && field[i+4]=="C" && field[i+5]=="o" && field[i+6]=="l" && field[i+7]=="o" && field[i+8]=="r" && field[i+9]=="C" && field[i+10]=="o" && field[i+11]=="m" && field[i+12]=="p" && field[i+13]=="a" && field[i+14]=="r" && field[i+15]=="e" && field[i+16]=="("){
-                        currStep = 1;
-                        i+=16
-                        continue
-                        }
-                    if(currStep==1){
-                        if(field[i]!=')'){
-                        ranges += field[i]
-                        }
-                        else{
-                        break
-                        }
-                    }
-                    }
-                    var thing = ranges.split(",")
-                    var cellRange = thing[0]
-                    var colorRef = thing[1]
-                
-                    var rangeA1Notation = cellRange;
-                    var range = activeSheet.getRange(rangeA1Notation);
-                    var bg = range.getBackgrounds();
-                
-                    var colorCellA1Notation = colorRef;
-                    var colorCell = activeSheet.getRange(colorCellA1Notation);
-                    var color = colorCell.getBackground();
-                
-                    returnArray = []
-                    for(i=0; i&ltbg.length; i++){
-                    returnArray.push(bg[i]==color);
-                    }
-                    return returnArray;
-                };
-                </code>
+<pre>function cellColorCompare(cellRange,colorRef) {
+    var activeRange = SpreadsheetApp.getActiveRange();
+    var activeSheet = activeRange.getSheet();
+    var formula = activeRange.getFormula();
+
+    var field = formula.split("");
+    var currStep = 0;
+    var ranges = ''
+    for(i=0; i&ltfield.length; i++){
+    if(currStep == 0)
+        if(field[i]!="c")
+        continue
+        if(field[i]=="c" && field[i+1]=="e" && field[i+2]=="l" && field[i+3]=="l" && field[i+4]=="C" && field[i+5]=="o" && field[i+6]=="l" && field[i+7]=="o" && field[i+8]=="r" && field[i+9]=="C" && field[i+10]=="o" && field[i+11]=="m" && field[i+12]=="p" && field[i+13]=="a" && field[i+14]=="r" && field[i+15]=="e" && field[i+16]=="("){
+        currStep = 1;
+        i+=16
+        continue
+        }
+    if(currStep==1){
+        if(field[i]!=')'){
+        ranges += field[i]
+        }
+        else{
+        break
+        }
+    }
+    }
+    var thing = ranges.split(",")
+    var cellRange = thing[0]
+    var colorRef = thing[1]
+
+    var rangeA1Notation = cellRange;
+    var range = activeSheet.getRange(rangeA1Notation);
+    var bg = range.getBackgrounds();
+
+    var colorCellA1Notation = colorRef;
+    var colorCell = activeSheet.getRange(colorCellA1Notation);
+    var color = colorCell.getBackground();
+
+    returnArray = []
+    for(i=0; i&ltbg.length; i++){
+    returnArray.push(bg[i]==color);
+    }
+    return returnArray;
+};</pre>
+            </code>
             </div>
         </main>
         <hr></hr>
