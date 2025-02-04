@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Projects | Connor H. Huang</title>
+</head>
+<body>
+    <header>
+        <main>
+            <h1>Canvas and Script Test</h1>
+            <canvas id="canvastest" width="300" height="200" style="border:1px solid black">
+                You have no canvas support on your browser
+            </canvas>
+            <script>
+                let canvas = document.getElementById("canvastest");
+                let ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#1769FF";
+                ctx.fillRect(0, 0, 200, 300);
+            </script>
+            <noscript>JS disabled or not supported. no content will show</noscript>
+        </main>
+    </header>
+</body>
+</html>
