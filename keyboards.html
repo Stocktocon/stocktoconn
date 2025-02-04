@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyboards | Connor H. Huang</title>
+    <style>
+        my-keyboard {
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            border: 2px solid grey;
+        }
+
+        my-keyboard[price="expensive"] {
+            background-color: goldenrod;
+            color: black;
+        }
+        my-keyboard[price="mid"] {
+            background-color: greenyellow;
+            color: black;
+        }
+        my-keyboard[price="cheap"] {
+            background-color: brown;
+            color: whitesmoke;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,11 +41,55 @@
             </ul>
         </nav>
     </header>
+    <!--Realistically I'll use the template for my hide personal stuff based on cookies thing.-->
+    <template>
+        <h2>[KEEB_NAME]</h2>
+        <img src="/media/[keeb_pic]" width="560">
+        <my-keyboard price="[category]">
+            Name: [name]<br>
+            Price: [price]<br>
+            Switches: [switches]<br>
+            Mods: [mods]<br>        
+        </my-keyboard>
+    </template>
     <main>
         <h1>Keyboards</h1>
         <p>This is a simple HTML page with a heading and a paragraph.</p>
+        <my-alert x-danger-level="high">We’re gonna need a bigger boat.</my-alert>
+        <my-alert x-danger-level="medium">It's a trap!</my-alert>
+        <my-alert x-danger-level="low">It’s over. It’s finally over.</my-alert>
     </main>
     <hr>
     <footer>more stuff soon&trade;</footer>
+    <section>
+        <h2>[EXPENSIVE KEEB]</h2>
+        <img src="/media/keeb_pic" alt="random expensive keeb" width="560">
+        <my-keyboard price="expensive">
+            Name: mc moneybags<br>
+            Price: $$$$$$$$<br>
+            Switches: ionno something gold<br>
+            Mods: money burner mod<br>        
+        </my-keyboard>
+    </section>
+    <section>
+        <h2>[Normal keeb]</h2>
+        <img src="/media/[keeb_pic]" alt="example midrange keeb" width="560">
+        <my-keyboard price="mid">
+            Name: Middle of the Road<br>
+            Price: ~$100<br>
+            Switches: Gateron Reds<br>
+            Mods: Tempest Tape mod<br>        
+        </my-keyboard>
+    </section>
+    <section>
+        <h2>[red dragon...]</h2>
+        <img src="/media/[keeb_pic]" width="560">
+        <my-keyboard price="cheap">
+            Name: Red Dragon<br>
+            Price: $20<br>
+            Switches: Outemu Blue<br>
+            Mods: None<br>        
+        </my-keyboard>
+    </section>
 </body>
 </html>
