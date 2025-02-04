@@ -46,12 +46,14 @@
             <h1>About Me</h1>
             <p>Some filler text. I'm Connor Huang. I like keyboards and I <i>(used to)</i> play a lot of cello. 
             I currently work at UCSD as a student cybersecurity programmer.</p>
-            <picture>
-                <source media="(max-width: 767px)" srcset="./img/portrait_small.jpg">
-                <source media="(min-width: 768px)" srcset="./img/portrait_big.jpg" >
-                <img src="./img/portrait.jpg" alt="portrait image">
-            </picture>
-            <aside>Cool Picture of Me</aside>
+            <figure>
+                <picture>
+                    <source media="(max-width: 767px)" srcset="./img/portrait_small.jpg">
+                    <source media="(min-width: 768px)" srcset="./img/portrait_big.jpg" >
+                    <img src="./img/portrait.jpg" alt="portrait image">
+                </picture>
+                <figcaption>Cool Picture of Me</figcaption>
+            </figure>
         </section>
         <section>
             <h2><b>Experience</b></h2>
@@ -86,7 +88,10 @@
     </main>
     <hr>
     <!--Not really sure what to put here. Maybe contact info?-->
-    <footer>more stuff <span>soon&trade;</span></footer>
+    <footer>
+        more stuff <span>soon&trade;</span>
+        <aside>let's see what we can do</aside>
+    </footer>
     <!--Span is used here because I think it'd be funny to make soon:tm: become animated in some sort down the line-->
     <hello-world></hello-world>
 </body>
