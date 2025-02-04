@@ -10,14 +10,15 @@
     <h1>Sample Search</h1>
     <search>
         <form>
-            <input type="text" placeholder="Search..." aria-label="Search">
-            <button type="submit">Go</button>
+            <input type="text" placeholder="Search...">
+            <button>Go</button>
         </form>
-        <button id="helpButton">Help</button>
     </search>
-    <dialog id="searchDialog" open>
+    <dialog open>
         <p>Type your search query in the box and click "Go" to find results.</p>
-        <button id="closeDialog">Close</button>
+        <form method="dialog">
+            <button>Close</button>
+        </form>
     </dialog>
 </body>
 </html>
