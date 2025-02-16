@@ -1,14 +1,20 @@
 /*
 main.css to be primary style sheet for the project
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
     --background-color: #CCC;
+    --font-sz: 18;
+    --font-sz-1: 1;
+    --font-sz-2: 1.2;
+    --font-sz-3: 1.5;
+    --font-sz-4: 2;
 }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Setting the base stuff */
 * { 
-    font-family: "Montserrat", Helvetica, sans-serif;
+    font-family: 'Montserrat', Helvetica, sans-serif;
     color:black; 
     background-color: var(--background-color, white);
 }
