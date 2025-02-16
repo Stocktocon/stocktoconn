@@ -4,7 +4,7 @@ main.css to be primary style sheet for the project
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --background-color: #ffd07e;
+    --background-color: #eef1cb;
     --font-sz: 18;
     --font-sz-1: 1;
     --font-sz-2: 1.2;
