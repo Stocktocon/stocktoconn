@@ -31,8 +31,14 @@ header img {
 }
 
 header nav ul{
-    flex-direction: row;
-    justify-content:space-evenly;
+    display:flex;
+    list-style: none;
+    justify-content: space-around;
+    outline: 2px solid black;
+}
+
+header>nav>ul>li {
+    display: inline-block;
 }
 
 a {
