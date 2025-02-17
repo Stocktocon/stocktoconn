@@ -30,7 +30,7 @@ header img {
     width: auto;
 }
 
-header nav {
+header nav ul{
     flex-direction: row;
     justify-content:space-evenly;
 }
