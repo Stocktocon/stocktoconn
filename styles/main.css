@@ -3,36 +3,60 @@ main.css to be primary style sheet for the project
 */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/*=================
+    GENERAL STUFF
+  =================*/
 :root {
     --background-color: #eef1cb;
     font-size: 18;
+    --title-weight: 1000;
+    --lighter-weight: 500;
+    --link-color: #1769ff;
 }
 
 /* Setting the base stuff */
 * { 
     font-family: 'Montserrat', Helvetica, sans-serif;
-    color:black; 
     background-color: var(--background-color, white);
 }
 
+
+/*================
+    Header stuff
+  ================*/
 header {
     display: flex;
     flex-direction:column;
 }
 
+header a {
+    text-decoration: none;
+    font-weight: var(--lighter-weight, 500);
+}
+
+header > h1 a {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: var(--title-weight, 1000);
+}
+
 header h1 {
     font-size: 3rem;
     text-align: center;
+    text-decoration: none;
 }
 
 header img {
     height: 5rem;
     width: auto;
+    vertical-align: middle;
 }
 
 header nav ul{
     display:flex;
     list-style: none;
+    padding: 1.2rem;
     justify-content: space-around;
     outline: 2px solid black;
 }
@@ -41,22 +65,59 @@ header>nav>ul>li {
     display: inline-block;
 }
 
-a {
-    /*fixing back the link coloring*/
-    color: blue;
+header>nav>ul a:hover {
+    color: orange;
+    text-decoration: underline;
 }
 
+nav>ul a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+/*=============
+    ToC stuff
+  =============*/
+.toc_container {
+    display: flex;
+    flex-direction: column;
+}
+.toc {
+    display:flex;
+    border: 3px solid black;
+}
+.toc ul {
+    list-style-type: none;
+}
+
+/*==============
+    Main stuff
+  ==============*/
+main {
+    display: flex;
+}
+/*================
+    Footer stuff
+  ================*/
 footer {
     color:#2c2c2c;
     font-size: 0.8rem;
 }
 
 footer span {
-    -webkit-animation: color_change 1s infinite alternate;
-    -moz-animation: color_change 1s infinite alternate;
-    -ms-animation: color_change 1s infinite alternate;
-    -o-animation: color_change 1s infinite alternate;
-    animation: color_change 1s infinite alternate;
+    -webkit-animation: color_change 1s infinite;
+    -moz-animation: color_change 1s infinite;
+    -ms-animation: color_change 1s infinite;
+    -o-animation: color_change 1s infinite;
+    animation: color_change 1s infinite;
+}
+
+/*==============
+    Misc stuff
+  ==============*/
+a {
+    /*fixing back the link coloring*/
+    color: var(--link-color);
+    transition: color 0.25s ease-in-out
 }
 
 /*
@@ -65,36 +126,41 @@ https://www.tjvantoll.com/2012/02/20/css3-color-animations/
 */
 @-webkit-keyframes color_change {
     0% { color: blue; }
-    25% { color: orange; }
-    50% { color: yellow; }
-    75% { color: black; }
-    100% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: black; }
+    67% { color: red; }
+    100% { color: blue; }
 }
 @-moz-keyframes color_change {
     0% { color: blue; }
-    25% { color: orange; }
-    50% { color: yellow; }
-    75% { color: black; }
-    100% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: black; }
+    67% { color: red; }
+    100% { color: blue; }
 }
 @-ms-keyframes color_change {
     0% { color: blue; }
-    25% { color: orange; }
-    50% { color: yellow; }
-    75% { color: black; }
-    100% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: black; }
+    67% { color: red; }
+    100% { color: blue; }
 }
 @-o-keyframes color_change {
     0% { color: blue; }
-    25% { color: orange; }
-    50% { color: yellow; }
-    75% { color: black; }
-    100% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: black; }
+    67% { color: red; }
+    100% { color: blue; }
 }
 @keyframes color_change {
     0% { color: blue; }
-    25% { color: orange; }
-    50% { color: yellow; }
-    75% { color: black; }
-    100% { color: red; }
+    16% { color: orange; }
+    33% { color: yellow; }
+    50% { color: black; }
+    67% { color: red; }
+    100% { color: blue; }
 }
