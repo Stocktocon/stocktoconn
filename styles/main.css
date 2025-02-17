@@ -48,9 +48,16 @@ header h1 {
 }
 
 header img {
+    background-color: transparent;
     height: 5rem;
     width: auto;
     vertical-align: middle;
+    transition: transform 1s ease-in-out
+}
+
+header img:hover {
+    transform: scale(1.5) rotate(1turn);
+    transform-origin: center;
 }
 
 header nav ul{
@@ -63,6 +70,9 @@ header nav ul{
 
 header>nav>ul>li {
     display: inline-block;
+    padding: 0.1rem;
+    outline: 0.2rem solid gray;
+    border-radius: 0.1rem;
 }
 
 header>nav>ul a:hover {
@@ -121,8 +131,10 @@ footer span {
 a {
     /*fixing back the link coloring*/
     color: var(--link-color);
-    transition: color 0.25s ease-in-out
+    transition: color 0.25s ease-in-out;
 }
+
+
 
 /*
 Color animation from this source then adjusted to work for text colors
