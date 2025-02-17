@@ -17,6 +17,7 @@ main.css to be primary style sheet for the project
 
 header {
     display: flex;
+    flex-direction:column;
 }
 
 header h1 {
