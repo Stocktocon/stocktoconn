@@ -5,7 +5,7 @@ main.css to be primary style sheet for the project
 
 :root {
     --background-color: #eef1cb;
-    --font-sz: 18;
+    font-size: 18;
     --font-sz-1: 1;
     --font-sz-2: 1.2;
     --font-sz-3: 1.5;
@@ -17,9 +17,24 @@ main.css to be primary style sheet for the project
     font-family: 'Montserrat', Helvetica, sans-serif;
     color:black; 
     background-color: var(--background-color, white);
+    font-size: 1rem;
+}
+
+header>h1 {
+    font-size: var(--font-sz-4, 2)*1em;
+}
+
+header>img {
+    height:var(--font-sz-4, 2)*1em;
+    width: auto;
 }
 
 a {
     /*fixing back the link coloring*/
     color: blue;
+}
+
+footer {
+    color:#2c2c2c;
+    font-size: 0.5rem;
 }
