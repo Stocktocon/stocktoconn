@@ -20,11 +20,11 @@ main.css to be primary style sheet for the project
     font-size: 1rem;
 }
 
-header>h1 {
+header h1 {
     font-size: var(--font-sz-4, 2)*1em;
 }
 
-header>img {
+header img {
     height:var(--font-sz-4, 2)*1em;
     width: auto;
 }
