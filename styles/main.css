@@ -37,3 +37,11 @@ footer {
     color:#2c2c2c;
     font-size: 0.5rem;
 }
+
+footer span {
+    -webkit-animation: color_change 1s infinite alternate;
+    -moz-animation: color_change 1s infinite alternate;
+    -ms-animation: color_change 1s infinite alternate;
+    -o-animation: color_change 1s infinite alternate;
+    animation: color_change 1s infinite alternate;
+}
