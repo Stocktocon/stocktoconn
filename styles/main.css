@@ -16,11 +16,12 @@ main.css to be primary style sheet for the project
 }
 
 header h1 {
-    font-size: 4rem;
+    font-size: 3rem;
+    justify-content: center;
 }
 
 header img {
-    height: 4rem;
+    height: 5rem;
     width: auto;
 }
 
