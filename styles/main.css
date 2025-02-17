@@ -21,7 +21,7 @@ header {
 
 header h1 {
     font-size: 3rem;
-    align-self: center;
+    text-align: center;
 }
 
 header img {
