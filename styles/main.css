@@ -31,7 +31,7 @@ header img {
 }
 
 header nav {
-    align-self: flex-end;
+    display:flex;
 }
 
 a {
