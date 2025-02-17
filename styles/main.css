@@ -10,6 +10,7 @@ main.css to be primary style sheet for the project
 
 /* Setting the base stuff */
 * { 
+    display: flex;
     font-family: 'Montserrat', Helvetica, sans-serif;
     color:black; 
     background-color: var(--background-color, white);
