@@ -41,3 +41,43 @@ footer span {
     -o-animation: color_change 1s infinite alternate;
     animation: color_change 1s infinite alternate;
 }
+
+/*
+Color animation from this source then adjusted to work for text colors
+https://www.tjvantoll.com/2012/02/20/css3-color-animations/
+*/
+@-webkit-keyframes color_change {
+    0% { color: blue; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: black; }
+    100% { color: red; }
+}
+@-moz-keyframes color_change {
+    0% { color: blue; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: black; }
+    100% { color: red; }
+}
+@-ms-keyframes color_change {
+    0% { color: blue; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: black; }
+    100% { color: red; }
+}
+@-o-keyframes color_change {
+    0% { color: blue; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: black; }
+    100% { color: red; }
+}
+@keyframes color_change {
+    0% { color: blue; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: black; }
+    100% { color: red; }
+}
