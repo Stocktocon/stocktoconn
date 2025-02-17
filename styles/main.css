@@ -77,13 +77,12 @@ nav>ul a:hover {
 /*=============
     ToC stuff
   =============*/
-.toc_container {
-    display: flex;
-    flex-direction: column;
-}
+
 .toc {
     display:flex;
+    flex-direction: column;
     border: 3px solid black;
+    padding:1rem;
 }
 .toc ul {
     list-style-type: none;
@@ -94,6 +93,11 @@ nav>ul a:hover {
   ==============*/
 main {
     display: flex;
+    flex-direction: column;
+}
+
+main>section {
+    border-top: 2px dashed black;
 }
 /*================
     Footer stuff
@@ -104,11 +108,11 @@ footer {
 }
 
 footer span {
-    -webkit-animation: color_change 1s infinite;
-    -moz-animation: color_change 1s infinite;
-    -ms-animation: color_change 1s infinite;
-    -o-animation: color_change 1s infinite;
-    animation: color_change 1s infinite;
+    -webkit-animation: color_change 2s infinite;
+    -moz-animation: color_change 2s infinite;
+    -ms-animation: color_change 2s infinite;
+    -o-animation: color_change 2s infinite;
+    animation: color_change 2s infinite;
 }
 
 /*==============

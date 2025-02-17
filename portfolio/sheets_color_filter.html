@@ -22,21 +22,24 @@
         </nav>
     </header>
     <main>
-        <h1>Portfolio</h1>
-        <nav class="toc">
-            <p><strong>Table of Contents</strong></p>
-            <li><a href="/portfolio/ccr.html">CCR Automation Script</a></li>
-            <li><a href="/portfolio/compliance.html">Compliance Project</a></li>
-            <li><a href="/portfolio/sheets_color_filter.html">Google Sheets Color Filter</a></li>
-        </nav>
-        <h2>Google Sheets: Cell Color Filtering</h2>
-        <p>I don't know why this isn't an option in google sheets to filter by default. 
-            Simply takes a reference cell and a range of cells and filters out the cells in the range
-            based on if they match the color of the reference cell or not. 
-        </p>
-        <div class="codeBlock">
-            <!--eventually might change code blocks to be in iframes of somesort that has specific -->
-            <code>
+        <section>
+            <h1>Portfolio</h1>
+            <nav class="toc">
+                <p><strong>Table of Contents</strong></p>
+                <li><a href="/portfolio/ccr.html">CCR Automation Script</a></li>
+                <li><a href="/portfolio/compliance.html">Compliance Project</a></li>
+                <li><a href="/portfolio/sheets_color_filter.html">Google Sheets Color Filter</a></li>
+            </nav>
+        </section>
+        <section>
+            <h2>Google Sheets: Cell Color Filtering</h2>
+            <p>I don't know why this isn't an option in google sheets to filter by default. 
+                Simply takes a reference cell and a range of cells and filters out the cells in the range
+                based on if they match the color of the reference cell or not. 
+            </p>
+            <div class="codeBlock">
+                <!--eventually might change code blocks to be in iframes of somesort that has specific -->
+                <code>
 <pre>function cellColorCompare(cellRange,colorRef) {
     var activeRange = SpreadsheetApp.getActiveRange();
     var activeSheet = activeRange.getSheet();
@@ -81,8 +84,9 @@
     }
     return returnArray;
 };</pre>
-        </code>
-        </div>
+                </code>
+            </div>
+        </section>
     </main>
     <hr>
     <footer>more stuff soon&trade;</footer>
