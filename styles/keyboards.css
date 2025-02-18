@@ -1,0 +1,15 @@
+img {
+    width: 80dvw;
+    max-width: 500px;
+}
+
+my-keyboard {
+    width: 80dvw;
+    max-width: 500px;
+    margin: 1rem;
+}
+
+.keyboards {
+    display: flex;
+    flex-wrap: wrap;
+}

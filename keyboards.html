@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/keyboards.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keyboards | Connor H. Huang</title>
@@ -58,41 +59,40 @@
     <main>
         <h1>Keyboards</h1>
         <p>This is a simple HTML page with a heading and a paragraph.</p>
-        <my-alert x-danger-level="high">We’re gonna need a bigger boat.</my-alert>
-        <my-alert x-danger-level="medium">It's a trap!</my-alert>
-        <my-alert x-danger-level="low">It’s over. It’s finally over.</my-alert>
+        <section class="keyboards">
+            <section>
+                <h2>My Personal End Game</h2>
+                <img src="/imgs/tako.jpg" alt="kbdfans odin with gmk tako" width="560">
+                <my-keyboard price="expensive">
+                    Name: KBDFans Odin w/ GMK Tako<br>
+                    Price: ~$600<br>
+                    Switches: Gateron CJs<br>
+                    Mods: None<br>        
+                </my-keyboard>
+            </section>
+            <section>
+                <h2>Rainy 75. Decent Budget Custom</h2>
+                <img src="/imgs/rainy.jpg" alt="rainy75 keyboard" width="560">
+                <my-keyboard price="mid">
+                    Name: Rainy75<br>
+                    Price: ~$100<br>
+                    Switches: Unknown<br>
+                    Mods: Unknown<br>        
+                </my-keyboard>
+            </section>
+            <section>
+                <h2>Dell Keyboard</h2>
+                <img src="/imgs/dell.jpg">
+                <my-keyboard price="cheap">
+                    Name: Dell Stock Keyboard<br>
+                    Price: Free<br>
+                    Switches: Membrane<br>
+                    Mods: Sitting in the drawers dust mod<br>        
+                </my-keyboard>
+            </section>
+        </section>
     </main>
     <hr>
     <footer>more stuff soon&trade;</footer>
-    <section>
-        <h2>[EXPENSIVE KEEB]</h2>
-        <img src="/media/keeb_pic" alt="random expensive keeb" width="560">
-        <my-keyboard price="expensive">
-            Name: mc moneybags<br>
-            Price: $$$$$$$$<br>
-            Switches: ionno something gold<br>
-            Mods: money burner mod<br>        
-        </my-keyboard>
-    </section>
-    <section>
-        <h2>[Normal keeb]</h2>
-        <img src="/media/[keeb_pic]" alt="example midrange keeb" width="560">
-        <my-keyboard price="mid">
-            Name: Middle of the Road<br>
-            Price: ~$100<br>
-            Switches: Gateron Reds<br>
-            Mods: Tempest Tape mod<br>        
-        </my-keyboard>
-    </section>
-    <section>
-        <h2>[red dragon...]</h2>
-        <img src="/media/[keeb_pic]" width="560">
-        <my-keyboard price="cheap">
-            Name: Red Dragon<br>
-            Price: $20<br>
-            Switches: Outemu Blue<br>
-            Mods: None<br>        
-        </my-keyboard>
-    </section>
 </body>
 </html>

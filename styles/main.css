@@ -101,14 +101,15 @@ header>nav>ul a:hover {
     header nav ul {
         display: none; 
         flex-direction: column;
-        background: white;
-        left: 0;
-        width: 100%;
-        border-radius: 0;
+        background-color: var(--background-color, white);
+        width:80dvi;
+        justify-self: center;
     }
 
-    header nav ul.show {
-        display: flex; 
+    header nav ul li {
+        outline: none;
+        margin: 0.5rem;
+        outline: 0.2rem solid gray;
     }
 
     .hamburger {
