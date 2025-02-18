@@ -16,6 +16,9 @@
 .aboutme figure figcaption {
     text-align: center;
 }
+#small_portrait {
+    width: 20dvw;
+}
 .aboutme-text {
     display: flex;
     flex-direction: column;
