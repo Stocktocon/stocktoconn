@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Connor H. Huang</title>
@@ -24,7 +25,9 @@
         <!-- I can't wait for us to be able to use a SSG to make these headers automatically apply to all pages. -->
         <h1><img src="/imgs/beng.webp" alt="benguin image" width="96" height="96"><a href="/index.html">Connor H. Huang</a></h1>
         <nav>
-            <ul>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="hamburger">☰</label>
+            <ul class="nav-menu">
                 <li><a href="/portfolio.html">Portfolio</a></li>
                 <li><a href="/personal_projects.html">Personal Projects</a></li>
                 <li><a href="/music.html">Music</a></li>
@@ -36,40 +39,48 @@
     </header>
     <noscript><em><strong>Warning!!!</strong> Java Script is disabled or not supported!!!</em></noscript>
     <main>
-        <section>
-            <h1>About Me</h1>
-            <p>Some filler text. I'm Connor Huang. I like keyboards and I <i>(used to)</i> play a lot of cello. 
-            I currently work at UCSD as a student cybersecurity programmer.</p>
-            <figure>
-                <picture>
-                    <source media="(max-width: 767px)" srcset="./img/portrait_small.jpg">
-                    <source media="(min-width: 768px)" srcset="./img/portrait_big.jpg" >
-                    <img src="./img/portrait.jpg" alt="portrait image">
-                </picture>
-                <figcaption>Cool Picture of Me</figcaption>
-            </figure>
-        </section>
-        <section>
-            <h2><b>Experience</b></h2>
-            <section>
-                <h3>UCSD Student Cybersecurity Programmer</h3>
-                <p>The last 3 years I've worked for the UCSD ITS as a student security programmer. I've learned many fundamentals of cybersecurity
-                    and a lot of practice in automation scripting. [filler text]
-                </p>
+        <section class="aboutme">
+            <section class="aboutme-content">
+                <figure>
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="/imgs/portrait_small.jpg" width="200rem" height="auto">
+                        <source media="(min-width: 768px)" srcset="/imgs/portrait_big.jpg" width="300rem" height="auto">
+                        <img src="/imgs/portrait.jpg" alt="portrait image" width="300rem" height="auto">
+                    </picture>
+                    <figcaption>Cool Picture of Me</figcaption>
+                </figure>
+                <section class="aboutme-text">
+                    <section>
+                        <h1>About Me</h1>
+                        <p>Some filler text. I'm Connor Huang. I like keyboards and I <i>(used to)</i> play a lot of cello. 
+                            I currently work at UCSD as a student cybersecurity programmer.</p>
+                    </section>
+                    <h2><b>Experience</b></h2>
+                    <section>
+                        <section>
+                            <h3>UCSD Student Cybersecurity Programmer</h3>
+                            <p>The last 3 years I've worked for the UCSD ITS as a student security programmer. I've learned many fundamentals of cybersecurity
+                                and a lot of practice in automation scripting. [filler text]
+                            </p>
+                        </section>
+                        <section>
+                            <h3><b>Keyboard Club</b></h3>
+                            <p>As an officer in the Keyboard Club @ UCSD, I've worked in running events and workshop sessions. It's given me a lot of experience in 
+                                management and logistics as well, looking into the backend of what it takes to run our activities. [filler text]
+                            </p>
+                        </section>
+                    </section>
+                    <section>
+                        <h2><b>Hobbies</b></h2>
+                        <p>My 3 main hobbies right now is keyboards, music, and fighting games. The keyboard hobby, while it may seem a bit ridiculous, ...[filler text]<br>
+                            [using br here because I'll likely be filling this out with more content that's longer]
+                        </p>
+                    </section>
+                </section>
             </section>
-            <section>
-                <h3><b>Keyboard Club</b></h3>
-                <p>As an officer in the Keyboard Club @ UCSD, I've worked in running events and workshop sessions. It's given me a lot of experience in 
-                    management and logistics as well, looking into the backend of what it takes to run our activities. [filler text]
-                </p>
-            </section>
         </section>
-        <section>
-            <h2><b>Hobbies</b></h2>
-            <p>My 3 main hobbies right now is keyboards, music, and fighting games. The keyboard hobby, while it may seem a bit ridiculous, ...[filler text]<br>
-                [using br here because I'll likely be filling this out with more content that's longer]
-            </p>
-        </section>
+    </main>
+    <section class="flex-bottom">
         <div class="daynightmode">
             <!--scuffed af sun for now for light/dark mode-->
             <svg width="50" height="50" onclick="modetoggle">
@@ -81,13 +92,13 @@
                 style="fill:white;stroke:black;stroke-width:1"/>
             </svg>
         </div>
-    </main>
-    <hr>
-    <!--Not really sure what to put here. Maybe contact info?-->
-    <footer>
-        more stuff <span>soon&trade;</span>
-        <aside>let's see what we can do</aside>
-    </footer>
+        <hr>
+        <!--Not really sure what to put here. Maybe contact info?-->
+        <footer>
+            more stuff <span>soon&trade;</span>
+            <aside>let's see what we can do</aside>
+        </footer>
+    </section>
     <!--Span is used here because I think it'd be funny to make soon:tm: become animated in some sort down the line-->
     <hello-world></hello-world>
 </body>

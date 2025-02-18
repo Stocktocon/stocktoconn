@@ -1,0 +1,25 @@
+/*======================
+    CSS For Index Page
+  ======================*/
+.aboutme {
+    display:flex;
+    flex-direction: column;
+}
+.aboutme-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 800rem;
+}
+.aboutme figure {
+    order: -1;
+}
+.aboutme figure figcaption {
+    text-align: center;
+}
+.aboutme-text {
+    display: flex;
+    flex-direction: column;
+}
+.flex-bottom {
+    margin-top: auto; 
+}
