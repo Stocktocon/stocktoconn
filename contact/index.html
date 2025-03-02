@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Connor H. Huang</title>
+    <style>
+        #theform {
+            width: 95%;
+            margin: auto;
+        }
+        fieldset {
+            width: 100%;
+            margin: auto;
+        }
+        #infofield {
+            display:flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        #infofield * {
+            width: 80%;
+            max-width: 400px;
+            margin: 0em 0.25em 0.25em;
+        }
+        #messagefield{
+            display:flex;
+            flex-direction: column;
+        }
+        #messagefield * {
+            margin: 0em 0.25em 0.25em;
+        }
+
+        .required::after {
+            content: "*";
+            color: red;
+        }
+
+        .errormsg{
+            display: None;
+            margin: auto;
+        }
+
+        .infomsg{
+            display: None;
+            margin: auto;
+        }
+
+        button {
+            margin: 1em auto auto 0.25em;
+        }
+    </style>
+</head>
+<!--since we can only style once I'll just have the font I'll just have it for home page. Poor UX but will be fixed when we can further use more CSS-->
+<!--I plan to try light mode dark mode for scripting later because that seems fun-->
+<body>
+    <header>
+        <!-- I can't wait for us to be able to use a SSG to make these headers automatically apply to all pages. -->
+        <h1><img src="/imgs/beng.webp" alt="benguin image" width="96" height="96"><a href="/index.html">Connor H. Huang</a></h1>
+        <nav>
+            <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+            <label for="menu-toggle" class="hamburger">☰</label>
+            <ul class="nav-menu">
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/personal_projects.html">Personal Projects</a></li>
+                <li><a href="/music.html">Music</a></li>
+                <li><a href="/keyboards.html">Keyboards</a></li>
+                <li><a href="/resume.html">Resume</a></li>
+                <li><a href="/sandbox.html">HTML Sandbox</a></li>
+            </ul>
+        </nav>
+    </header>
+    <noscript><em><strong>Warning!!!</strong> Java Script is disabled or not supported!!!</em></noscript>
+    <main>
+        <section>
+            <h1>Contact me</h1>
+            <p>Please fill out the contact form with your name, email, reason to contact, and message body.</p>
+        </section>
+        <section id="theform"> 
+            <form class="contact_form" action="https://httpbin.org/post" method="POST" autofocus>
+                <fieldset id="infofield">
+                    <legend>Your Information</legend>
+                    <label for="fullname" class="required">Full Name: </label>
+                    <input type="text" id="fullname" name="fullname" required>
+                    <label for="email" class="required">Email: </label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset>
+                <fieldset id="messagefield">
+                    <legend>Message</legend>
+                    <label for="reason">Contact Reason</label>
+                    <input type="text" id="reason" name="reason" maxlength="30" list="reasons" placeholder="Type or choose from menu">
+                    <datalist id="reasons">
+                        <option value="Employment">Employment</option>
+                        <option value="Collaboration">Collaboration</option>
+                        <option value="Project Inquiry">Project Inquiry</option>
+                    </datalist>
+                    <label for="message" class="required">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </fieldset>
+                <button type="submit">Submit</button>
+                <output class="errormsg">Filler Text</output>
+                <output class="infomsg">Filler Text AGAIN</output>
+            </form>
+        </section>
+    </main>
