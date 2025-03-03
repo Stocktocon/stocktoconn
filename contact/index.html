@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Connor H. Huang</title>
+
+    <!--Doing an internal style sheet instead of linking to a file just to make it simple-->
     <style>
         #theform {
             width: 95%;
@@ -51,12 +53,13 @@
         }
 
         .errormsg{
-            display: None;
+            opacity: 0;
             margin: auto;
+            color: red;
         }
 
         .infomsg{
-            display: None;
+            opacity: 1;
             margin: auto;
         }
 
@@ -64,6 +67,8 @@
             margin: 1em auto auto 0.25em;
         }
     </style>
+
+
 </head>
 <!--since we can only style once I'll just have the font I'll just have it for home page. Poor UX but will be fixed when we can further use more CSS-->
 <!--I plan to try light mode dark mode for scripting later because that seems fun-->
@@ -116,10 +121,91 @@
                     </datalist>
                     <label for="message" class="required">Message</label>
                     <textarea id="message" name="message" maxlength="1000" required></textarea>
+                    <output class="infomsg"></output>
                 </fieldset>
+                <input type="text" id="form-errors" hidden>
                 <button type="submit">Submit</button>
-                <output class="errormsg">Filler Text</output>
-                <output class="infomsg">Filler Text AGAIN</output>
+                <output class="errormsg"></output>
             </form>
         </section>
     </main>
+        <!--JS for validation-->
+    <script>
+        const form = document.getElementById("theform");
+        const email = document.getElementById("email");
+        const name = document.getElementById("fullname");
+        const message = document.getElementById("message");
+        const infoMsg = document.querySelector(".infomsg");
+        const errorMsg = document.querySelector(".errormsg");
+        const charLimit = message.maxLength;
+        const formErrors = [];
+        //pattern from https://stackoverflow.com/questions/7428955/regex-expressions-prevent-sql-script-injection
+        const sqlInjectionPattern = /[\t\r\n]|(--[^\r\n]*)|(\/\*[\w\W]*?(?=\*)\*\/)/gi; //have it search for any /> strings to see if it tries to escape a field
+
+        function showErrorMessage(message) {
+            errorMsg.textContent = message;
+            errorMsg.style.opacity = "1";
+            setTimeout(() => {
+                errorMsg.textContent = "";
+                errorMsg.style.opacity = "0";
+            }, 2000);
+        }
+
+        //base validation template
+        function validateField(input, pattern, errorMessage){
+            if(!pattern.test(input.value)) {
+                showErrorMessage(errorMessage);
+                formErrors.push({ field: input.name, input: input.value, message: errorMessage});
+                return false;
+            }
+            if(sqlInjectionPattern.test(input.value)){
+                showErrorMessage("Detected SQL Injection");
+                formErrors.push({ field: input.name, input: input.value, message:"Detected SQL Injection"});
+                return false;
+            }
+            return true;
+        }
+        
+        email.addEventListener("change", function() {
+            validateField(email,/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Invalid email format.");
+        });
+
+        name.addEventListener("change", function() {
+            validateField(name, /[\s\S]*/, "Invalid Name");
+        });
+
+        message.addEventListener("input", function () {
+            const remaining = charLimit - message.value.length;
+            infoMsg.textContent = `Characters remaining: ${remaining}`;
+            if (remaining <= 20) {
+                infoMsg.style.color = "red";
+            } else {
+                infoMsg.style.color = "black";
+            }
+        });
+        
+        form.addEventListener("submit", function (event) {
+            var valid = true;
+            if (!validateField(email,/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, "Invalid email format.")){
+                valid = false;
+            }
+            if (!validateField(name, /[\s\S]*/, "Invalid Name")){
+                valid = false;
+            }
+            if(!valid) {
+                event.preventDefault();
+                showErrorMessage("Please fix errors before submitting.");
+            }
+            else {
+                document.querySelector(".contact_form").appendChild(
+                    Object.assign(document.createElement("input"), {
+                        type: "hidden",
+                        name: "form-errors",
+                        value: JSON.stringify(formErrors)
+                    })
+                );
+            }
+        });
+    </script>
+</body>
+</html>

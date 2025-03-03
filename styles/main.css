@@ -8,18 +8,23 @@ main.css to be primary style sheet for the project
   =================*/
 :root {
     --background-color: #f6f6dc;
+    --background-color-dark: #242421;
+    --text-color: black;
+    --text-color-dark: white;
+    --faded-text: #2c2c2c;
+    --faded-text-dark: #bcbcbc;
     font-size: 18;
     --title-weight: 1000;
     --lighter-weight: 500;
     --link-color: #1769ff;
     --my-orange: #ff7f27
+    background-color: var(--background-color, white);/* fallback background without wide gamut */
+    color: var(--text-color, black);
 }
 
 /* Setting the base stuff */
 * { 
     font-family: 'Montserrat', Helvetica, sans-serif;
-    background-color: var(--background-color, white);/* fallback background without wide gamut */
-    background-color: color(display-pp3 0.98 0.94 0.85);
 }
 
 
@@ -159,7 +164,7 @@ main>section {
     Footer stuff
   ================*/
 footer {
-    color:#2c2c2c;
+    color:var(--faded-text, #2c2c2c);
     font-size: 0.8rem;
 }
 

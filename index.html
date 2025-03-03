@@ -22,6 +22,10 @@
 <!--I plan to try light mode dark mode for scripting later because that seems fun-->
 <body>
     <header>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+            <span class="slider"></span>
+        </label>    
         <!-- I can't wait for us to be able to use a SSG to make these headers automatically apply to all pages. -->
         <h1><img src="/imgs/beng.webp" alt="benguin image" width="96" height="96"><a href="/index.html">Connor H. Huang</a></h1>
         <nav>
@@ -102,5 +106,6 @@
     </section>
     <!--Span is used here because I think it'd be funny to make soon:tm: become animated in some sort down the line-->
     <hello-world></hello-world>
+    <script src="/scripts/themes.js"></script>
 </body>
 </html>
