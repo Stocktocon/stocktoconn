@@ -17,7 +17,7 @@ main.css to be primary style sheet for the project
     --title-weight: 1000;
     --lighter-weight: 500;
     --link-color: #1769ff;
-    --my-orange: #ff7f27
+    --my-orange: #ff7f27;
     background-color: var(--background-color, white);/* fallback background without wide gamut */
     color: var(--text-color, black);
 }
