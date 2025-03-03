@@ -202,7 +202,10 @@ footer span {
 
 .slider:before{
     position: absolute;
-    content: "";
+    text-align: center;
+    content: "☀︎";
+    font-size:18px;
+    color: gray;
     height: 26px;
     width: 26px;
     left: 4px;
@@ -213,6 +216,7 @@ footer span {
 
 input:checked + .slider:before {
     transform: translateX(26px);
+    content: "☾"
 }
 
 input:checked + .slider {
