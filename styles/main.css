@@ -176,6 +176,49 @@ footer span {
     animation: color_change 2s infinite;
 }
 
+/*===========
+    Slider
+  ===========*/
+  .switch {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    display: inline-block;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+}
+
+.slider:before{
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+input:checked + .slider {
+    background-color: red;
+}
+
 /*==============
     Misc stuff
   ==============*/

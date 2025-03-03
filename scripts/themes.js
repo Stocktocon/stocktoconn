@@ -7,11 +7,12 @@ function setTheme(theme) {
     if (theme === 'dark'){
         root.style.setProperty('background-color', 'var(--background-color-dark, black)');
         root.style.setProperty('color', 'var(--text-color-dark, white)');
-        footer.style.setProperty('--faded-text', '#bcbcbc');
+        document.querySelector('footer').style.setProperty('color', 'var(--faded-text-dark, #bcbcbc)');
     }
     else{
         root.style.setProperty('background', 'var(--background-color, white)');
         root.style.setProperty('color', 'var(--text-color, black)');
+        document.querySelector('footer').style.setProperty('color', 'var(--faded-text, #2c2c2c)');
     }
 }
 function toggleTheme()
