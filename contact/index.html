@@ -105,7 +105,7 @@
                     <legend>Your Information</legend>
                     <label for="fullname" class="required">Full Name: </label>
                     <div>
-                        <input type="text" id="fullname" name="fullname" placeholder="name" required>
+                        <input type="text" id="fullname" name="fullname" placeholder="name" pattern="[^&quot;&semi;&dollar;%^&amp;\*\\#\/&lt;&gt;]+" required>
                         <span></span>
                     </div>
                     <label for="email" class="required">Email: </label>
@@ -138,6 +138,7 @@
         const form = document.getElementById("theform");
         const email = document.getElementById("email");
         const name = document.getElementById("fullname");
+        const reason = document.getElementById("reason");
         const message = document.getElementById("message");
         const infoMsg = document.querySelector(".infomsg");
         const errorMsg = document.querySelector(".errormsg");
@@ -145,7 +146,8 @@
         const formErrors = [];
         //pattern from https://stackoverflow.com/questions/7428955/regex-expressions-prevent-sql-script-injection
         const sqlInjectionPattern = /[\t\r\n]|(--[^\r\n]*)|(\/\*[\w\W]*?(?=\*)\*\/)/gi; //have it search for any /> strings to see if it tries to escape a field
-
+        const disallowedpattern = /^[^"';$%^&*\\#\/<>]+$/;
+        const deletepattern = /["';$%^&*\\#\/<>]+/gi;
         function showErrorMessage(message) {
             errorMsg.textContent = message;
             errorMsg.style.opacity = "1";
@@ -177,7 +179,20 @@
         name.addEventListener("change", function() {
             validateField(name, /[\s\S]*/, "Invalid Name");
         });
-
+        function checkmasking(input, pattern) {
+            input.addEventListener("input", function () {
+                if(!pattern.test(input.value)){
+                    showErrorMessage("Invalid Characters. Special Characters are Disallowed.");
+                    input.value = input.value.replace(deletepattern, "");
+                    formErrors.push({ field: input.name, message: "Invalid Characters. Special Characters are Disallowed." });
+                }else{
+                    return true;
+                }
+            });
+        }
+        checkmasking(fullname, disallowedpattern);
+        checkmasking(email, disallowedpattern);
+        checkmasking(reason, disallowedpattern);
         message.addEventListener("input", function () {
             const remaining = charLimit - message.value.length;
             infoMsg.textContent = `Characters remaining: ${remaining}`;
