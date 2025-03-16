@@ -9,6 +9,10 @@
 </head>
 <body>
     <header>
+        <label class="switch">
+            <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+            <span class="slider"></span>
+        </label>    
         <h1><img src="/imgs/beng.webp" alt="benguin image" width="96" height="96"><a href="/index.html">Connor H. Huang</a></h1>
         <nav>
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
@@ -66,7 +70,15 @@
             </div>
         </section>
     </main>
-    <hr>
-    <footer>more stuff soon&trade;</footer>
+    <section class="flex-bottom">
+        <hr>
+        <!--Not really sure what to put here. Maybe contact info?-->
+        <footer>
+            more stuff <span>soon&trade;</span>
+            <aside>let's see what we can do</aside>
+            <section class="contact box"> <a href="/contact">Contact Form</a></section>
+        </footer>
+    </section>
+    <script src="/scripts/themes.js"></script>
 </body>
 </html>
