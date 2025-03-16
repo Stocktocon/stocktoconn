@@ -3,6 +3,7 @@
 <head>
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/projectcard.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Projects | Connor H. Huang</title>
@@ -29,7 +30,29 @@
     </header>
     <main>
         <h1>Projects</h1>
-        <p>This is a simple HTML page with a heading and a paragraph.</p>
+        <p>Some projects that I've worked on so far! Click on one for more details</p>
+        <div class="cardwrapper">
+            <project-card>
+                <h2>temp card</h2>
+                <picture>
+                    <source media="(max-width:500px)" srcset="/imgs/cable_sm.jpg">
+                    <source media="(min-width:499px)" srcset="/imgs/cable.jpg">
+                    <img alt="cable.jpg" src="/imgs/cable_sm.jpg">
+                </picture>
+                <p>Starting details on the project</p>
+                <a>Read More</a>
+            </project-card>
+            <project-card>
+                <h2>temp card</h2>
+                <picture>
+                    <source media="(max-width:500px)" srcset="/imgs/cable_sm.jpg">
+                    <source media="(min-width:499px)" srcset="/imgs/cable.jpg">
+                    <img alt="cable.jpg" src="/imgs/cable_sm.jpg">
+                </picture>
+                <p>Starting details on the project</p>
+                <a>Read More</a>
+            </project-card>
+        </div>
     </main>
     <section class="flex-bottom">
         <hr>
@@ -41,5 +64,6 @@
         </footer>
     </section>
     <script src="/scripts/themes.js"></script>
+    <script src="projectcard.js"></script>
 </body>
 </html>

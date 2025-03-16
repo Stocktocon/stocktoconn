@@ -17,3 +17,4 @@
 - Added project card to the Portfolio page as well
 - add hiding feature
     - hidden information will be personal information so I can hide my personal projects and stuff for my professional facing portfolio and it'll dynamically add back into the directories of the website. 
+- if I feel up to it at the end then modify the layout of the repo so that I can use ie /portfolio instead of /portfolio.html by adding folders and index.html to those

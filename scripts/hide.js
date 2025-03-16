@@ -1,0 +1,1 @@
+// do stuff here similar to the light mode dark mode but instead modify the DOM and add stuff into the nav header when necessary. 

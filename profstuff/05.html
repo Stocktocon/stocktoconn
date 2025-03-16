@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Web Component Usage Patterns</title>
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<style>
+		super-wc {
+			display: block;
+			font-size: 2rem;
+			margin: 2rem;
+		}
+
+		/* a style rule to hide the fallback and then show it if the JS fails */
+		super-wc:not(:defined) {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+<h1>Web Components Usage</h1>
+
+<super-wc role="nav">Make sure roles are clear</super-wc>
+
+<!-- consider using mark-up to provide a default to upscale -->
+<super-wc>
+	<!-- this shows even if JS never runs -->
+	<p>This is <em>to be </em> upscaled!</p>
+</super-wc>
+
+<!-- not so good it needs JS to do anything -->
+<super-wc></super-wc>
+
+<script src="superwebcomponent.js"></script>
+<script>
+	// simulate the slow loading of the script with a setTimeout and then define the custom element so we can see the idea of why we use the :defined CSS
+	setTimeout(function() {
+		// Define the custom element
+		customElements.define('super-wc', SuperWC);
+	}, 3000);
+
+</script>
+<noscript>
+	<p>What happens if JS is off?</p>
+</noscript>
+</body>
+</html>
