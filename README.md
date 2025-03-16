@@ -5,6 +5,8 @@
 - Added the light mode dark mode feature to all pages (didn't do because lazy and didn't want to have to copy and paste)
 - Made a JS file for the last enhancement to be made
     - I will make one more page that will immediately redirect to the home page but also put onto local storage a value of if information should hide or not
+- Made beng spin whenever you hover the header h1 because I just like the spin animation and I want to make sure it's more obvious because it's silly. Might revert later since it's supposed to be more of an easter egg type of feature rather than in your face. 
+- added the hyperlink CSS to all links to make it consistent across the board
 
 
 ## HW 5 Enhancements (TO BE DONE):

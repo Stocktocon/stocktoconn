@@ -62,7 +62,7 @@ header img {
     transition: transform 1s ease-in-out
 }
 
-header img:hover {
+header h1:hover img {
     transform: scale(1.5) rotate(1turn);
     transform-origin: center;
 }
@@ -84,7 +84,8 @@ header>nav>ul>li {
     border-radius: 0.1rem;
 }
 
-header>nav>ul a:hover {
+
+a:hover {
     color: var(--my-orange, orange);
     text-decoration: underline;
 }
@@ -132,11 +133,6 @@ header>nav>ul a:hover {
 /*=============
     ToC stuff
   =============*/
-
-nav>ul a:hover {
-    color: var(--my-orange, orange);
-    text-decoration: underline;
-}
 
 .toc {
     display:flex;
