@@ -30,27 +30,19 @@
     </header>
     <main>
         <h1>Projects</h1>
-        <p>Some projects that I've worked on so far! Click on one for more details</p>
+        <p>Some projects that I've worked on so far! Click on of the buttons below to load local or remote cards!<br>
+        If you want to read more, click on the read more at the bottom of the card.</p>
+        <div class="buttons">
+            <button class="loadbuttons" id="load-local">Load Local</button>
+            <button class="loadbuttons" id="load-remote">Load Remote</button>
+            <button class="loadbuttons" id="reset-local">Reset Local</button>
+        </div>
         <div class="cardwrapper">
             <project-card>
-                <h2>temp card</h2>
-                <picture>
-                    <source media="(max-width:500px)" srcset="/imgs/cable_sm.jpg">
-                    <source media="(min-width:499px)" srcset="/imgs/cable.jpg">
-                    <img alt="cable.jpg" src="/imgs/cable_sm.jpg">
-                </picture>
-                <p>Starting details on the project</p>
-                <a>Read More</a>
-            </project-card>
-            <project-card>
-                <h2>temp card</h2>
-                <picture>
-                    <source media="(max-width:500px)" srcset="/imgs/cable_sm.jpg">
-                    <source media="(min-width:499px)" srcset="/imgs/cable.jpg">
-                    <img alt="cable.jpg" src="/imgs/cable_sm.jpg">
-                </picture>
-                <p>Starting details on the project</p>
-                <a>Read More</a>
+                <noscript>
+                    <h2>WARNING JS DISABLED</h2>
+                    <p>The functionality of this page requires JS to be enabled</p>
+                </noscript>
             </project-card>
         </div>
     </main>
@@ -64,6 +56,6 @@
         </footer>
     </section>
     <script src="/scripts/themes.js"></script>
-    <script src="projectcard.js"></script>
+    <script src="/scripts/projectcard.js"></script>
 </body>
 </html>

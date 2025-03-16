@@ -1,48 +1,8 @@
 div.cardwrapper {
     display: flex;
-    
 }
 
-project-card {
-    display: flex;
-    flex-direction:column;
-    max-width: 500px;
-    min-width: 200px;
-    width: 40dvw;
-    height: auto;
-    border: solid 3px black;
-    border-radius: 1rem;
-    padding: 1rem;
-    margin: 1rem;
-    background-color: rgb(17, 83, 31);
-    box-shadow: 10px 10px 5px gray,
-    inset 0 -3em 3em rgb(13, 63, 24);
-    transition: transform 0.5s ease-in-out;
-}
-
-project-card h2, project-card p, project-card a {
-    width: 90%;
-    margin: auto;
-}
-
-project-card h2 {
-    margin:auto auto 0.5rem;
-    color: var(--background-color, white);
-}
-project-card picture {
-    width:95%;
-    margin: auto;
-}
-
-project-card p {
-    margin: 0.5rem auto;
-    color:var(--background-color, white);
-}
-project-card picture * {
-    width: 100%;
-    margin: auto;
-}
-
-project-card:hover {
-    transform: scale(1.05);
+.loadbuttons {
+    max-width:200px;
+    height:auto;
 }

@@ -151,6 +151,7 @@ a:hover {
 main {
     display: flex;
     flex-direction: column;
+    margin: auto 2rem;
 }
 
 main>section {
