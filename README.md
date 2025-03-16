@@ -8,11 +8,10 @@
 - Made beng spin whenever you hover the header h1 because I just like the spin animation and I want to make sure it's more obvious because it's silly. Might revert later since it's supposed to be more of an easter egg type of feature rather than in your face. 
 - added the hyperlink CSS to all links to make it consistent across the board
 - Project card is implement at the CSS level
-
-
-## HW 5 Enhancements (TO BE DONE):
 - project-card custom element
     - local and remote reading for project card
+
+## HW 5 Enhancements (TO BE DONE):
 - Added a method to fiew the resume file. Pulled from (insert repo/stackoverflow with source code)
 - Filled out content for Personal Projects since the timing was right with the implementation of the the project-card custom element
 - Added project card to the Portfolio page as well
