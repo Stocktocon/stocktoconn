@@ -10,6 +10,8 @@
 
 
 ## HW 5 Enhancements (TO BE DONE):
+- project-card custom element
+    - local and remote reading for project card
 - Added a method to fiew the resume file. Pulled from (insert repo/stackoverflow with source code)
 - Filled out content for Personal Projects since the timing was right with the implementation of the the project-card custom element
 - Added project card to the Portfolio page as well
