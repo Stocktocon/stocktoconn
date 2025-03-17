@@ -6,6 +6,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Projects | Connor H. Huang</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction:column;
+            vertical-align: middle;
+        }
+        picture {
+            max-width: 50%;
+            margin:auto;
+        }
+        picture * {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -32,8 +46,30 @@
         </nav>
     </header>
     <main>
-        <h1>Projects</h1>
-        <p>This is a simple HTML page with a heading and a paragraph.</p>
+        <h1>Projects - Custom Keyboard Cables</h1>
+        <p>
+            As a part of the workshop team for the Keyboard Club at UCSD, one of our responsibilities is to come up with a project. 
+            Unlike the other members of the workshop team, I have most of my specialization in electronics. Because of that, I wanted my 
+            first project to be something relatively simple. One of the things I've been really wanting to try making is a custom keyboard cable.
+        </p>
+        <picture>
+            <source media="(max-width:500px)" srcset="/imgs/cable_sm.jpg">
+            <source media="(min-width:499px)" srcset="/imgs/cable.jpg">
+            <img src="/imgs/cable_sm.jpg">
+        </picture>
+        <p>
+            Since at the time, the projects we were making was to sell for fundraising, I had to make a fairly large quantity of these which was quite tedious. 
+            The main issue that we had for the first set of cables was sleeving the raw PVC USB wire. The blue/black paracord that we used for this first color 
+            barely fit around the usb wire which ended up making it very tedious to sleeve the wire. Each USB wire was about 30 minutes to sleeve alone. Total we produced 
+            12 cables and with the help of other officers of the club we managed to finish them all. 
+        </p>
+        <p>
+            To move forward from this, we're planning on running a workshop where we plan to teach students how to make their own cables. While we haven't quite yet
+            started on running, since I was the one making the cables I would be the lead for this workshop. Part sourcing has been the main pain point. We just managed 
+            to find a source for an extra large spool of up-to-spec USB 2.0 wire that we could use but we need to find a source for the USB-C header. I anticipate that 
+            USB-C header to also be an issue if we find a header identical to the one we've been using for the ones we sold. The data pins are very small but also close 
+            together on those so if we have inexperienced students that don't/barely know how to solder then that will be a major pain point for them. 
+        </p>
     </main>
     <section class="flex-bottom">
         <hr>
