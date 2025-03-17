@@ -155,6 +155,16 @@ main {
     margin: auto 2rem;
 }
 
+.codeBlock {
+    display:flex;
+    border: solid 2px gray;
+    padding:1rem;
+}
+code {
+    font-family: Monaco, monospace;
+    padding: 1rem;
+}
+
 main>section {
     border-top: 2px dashed black;
 }

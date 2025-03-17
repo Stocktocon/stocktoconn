@@ -21,10 +21,6 @@ class ProjectCard extends HTMLElement {
     render() {
         this.shadowRoot.innerHTML = `
         <style>
-            div.cardwrapper {
-                display: flex;
-            }
-
             .loadbuttons {
                 max-width:200px;
                 height:auto;
@@ -33,14 +29,14 @@ class ProjectCard extends HTMLElement {
             .card {
                 display: flex;
                 flex-direction:column;
-                max-width: 500px;
+                max-width: 400px;
                 min-width: 200px;
                 width: 40dvw;
-                height: auto;
+                height: 88%;
                 border: solid 3px black;
                 border-radius: 1rem;
                 padding: 1rem;
-                margin: 1rem;
+                margin: 1rem 1rem 6rem;
                 background-color: rgb(17, 83, 31);
                 box-shadow: 10px 10px 5px gray,
                 inset 0 -3em 3em rgb(13, 63, 24);
