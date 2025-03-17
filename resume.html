@@ -33,6 +33,12 @@
         <!--<a href="./files/resume.pdf" download>download</a> DOWNLOAD STENCIL FOR LATER-->
         <div class="docContainer">
             <p>Temporary area until I can make a container that can hold, and embed a document</p>
+            <style>
+                .pdfobject-container { height: 1000px; border: 1px solid #ccc; }
+                </style>
+                <div id="my-pdf"></div>
+                <script src="/scripts/pdfobject.js"></script>
+                <script>PDFObject.embed("/media/it_resume.pdf", "#my-pdf");</script>
         </div>
     </main>
     <section class="flex-bottom">
@@ -46,5 +52,6 @@
     </section>
     <script src="/scripts/themes.js"></script>
     <script src="/scripts/hide.js"></script>
+    <script src="/scripts/pdfobject.js"></script>
 </body>
 </html>
