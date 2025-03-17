@@ -6,6 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Projects | Connor H. Huang</title>
+    <style>
+        main {
+            display: flex;
+            flex-direction:column;
+            vertical-align: middle;
+        }
+        picture {
+            max-width: 90%;
+            margin:auto;
+        }
+        picture * {
+            width: 100%;
+            margin:auto;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,8 +43,28 @@
         </nav>
     </header>
     <main>
-        <h1>Projects</h1>
-        <p>This is a simple HTML page with a heading and a paragraph.</p>
+        <h1>Projects - Home Minecraft Server</h1>
+        <a href="/personal_projects.html">Return to Projects</a>
+        <p>
+            A little over a year ago, I set up a minecraft server for my friends. Since then I've successfully managed to keep the server up and running. 
+            I'll be using this time to just really shout out <a href="https://craftycontrol.com/">Crafty Controller</a> since their software has made managing
+            the minecraft servers extremely simple. 
+        </p>
+        <picture>
+            <source media="(max-width:1000px)" style="max-height:200px; width:auto;" srcset="https://craftycontrol.com/static/img/crafty-logo-vertical.png">
+            <source media="(min-width:999px)" srcset="https://craftycontrol.com/static/img/logo_long.png">
+            <img style="max-height:200px;  width:auto;" src="https://craftycontrol.com/static/img/crafty-logo-vertical.png">
+        </picture>
+        <p>
+            They provide a great web accessible way to get to your server and manage them and lets you skip a lot of steps in setting up servers since it automatically
+            manages a good portion of them.
+        </p>
+        <p>
+            Managing the server has really been a great experience for me since it gave me a to deal with firewall security with UFW, port forwarding and port security, 
+            and a lot of other experiences like watching logs and hardware usage. There's still some optimizations that I need to make to make it run completely
+            smoothly since there's still some stutters on heavy modpacks, but overall it's been great!
+        </p>
+        <a href="/personal_projects.html">Return to Projects</a>
     </main>
     <section class="flex-bottom">
         <hr>

@@ -23,7 +23,6 @@ class ProjectCard extends HTMLElement {
         <style>
             div.cardwrapper {
                 display: flex;
-                
             }
 
             .loadbuttons {
