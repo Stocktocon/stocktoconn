@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Projects | Connor H. Huang</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Set Local Storage</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set a key-value pair in localStorage
+            localStorage.setItem("weaf", false);
+
+            window.location.href = "index.html"; // Change to your actual home page
+        });
+    </script>
 </head>
 <body>
     <header>
@@ -13,10 +20,7 @@
             <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
             <span class="slider"></span>
         </label>    
-        <label class="switch">
-            <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
-            <span class="slider"></span>
-        </label>    
+        <!-- I can't wait for us to be able to use a SSG to make these headers automatically apply to all pages. -->
         <h1><img src="/imgs/beng.webp" alt="benguin image" width="96" height="96"><a href="/index.html">Connor H. Huang</a></h1>
         <nav>
             <input type="checkbox" id="menu-toggle" class="menu-checkbox">
@@ -31,19 +35,9 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Projects</h1>
-        <p>This is a simple HTML page with a heading and a paragraph.</p>
-    </main>
-    <section class="flex-bottom">
-        <hr>
-        <!--Not really sure what to put here. Maybe contact info?-->
-        <footer>
-            more stuff <span>soon&trade;</span>
-            <aside>let's see what we can do</aside>
-            <section class="contact box"> <a href="/contact">Contact Form</a></section>
-        </footer>
-    </section>
+    <h2>Setting Local Storage...</h2>
+    <p>You will be redirected shortly.</p>
+    <noscript>You're javascript is disabled so you won't get my cool filtering feature. Redirect <a href="/">here</a></noscript>
     <script src="/scripts/themes.js"></script>
     <script src="/scripts/hide.js"></script>
 </body>
