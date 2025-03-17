@@ -14,9 +14,9 @@ What I wanted to try was to add a way so I can link people to my website but hav
     - local and remote reading for project card
 - add hiding feature
     - hidden information will be personal information so I can hide my personal projects and stuff for my professional facing portfolio and it'll dynamically add back into the directories of the website. 
+- Added a method to fiew the resume file. Pulled from [this repo](https://pdfobject.com/guide/quick-start.html)
+- Filled out content for Personal Projects since the timing was right with the implementation of the the project-card custom element
 
 ## HW 5 Enhancements (TO BE DONE):
-- Added a method to fiew the resume file. Pulled from (insert repo/stackoverflow with source code)
-- Filled out content for Personal Projects since the timing was right with the implementation of the the project-card custom element
-- Added project card to the Portfolio page as well
+- Added project card to the Portfolio page as well (skipped for now since I'd basically have to set up a separate local storage since they can't mix)
 - if I feel up to it at the end then modify the layout of the repo so that I can use ie /portfolio instead of /portfolio.html by adding folders and index.html to those
